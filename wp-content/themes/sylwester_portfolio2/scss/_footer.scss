@@ -1,0 +1,44 @@
+footer {
+	background: black;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+	height: 6em;
+	padding: 0 5%;
+
+	p {
+		width: 30%;
+		font-size: 12px;
+		font-weight: bold;
+	}
+
+	.footer-menu {
+		list-style-type: none;
+		width: 70%;
+		font-size: 12px;
+		text-transform: uppercase;
+		text-align: right;
+
+		a {
+			color: white;
+		}
+
+		li {
+			display: inline-block;
+			margin-left: 5%;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	footer {
+		height: 3em;
+
+		p {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/*
+
+!.gitignore
+!gulpfile.js
+!package.json
+!package-lock.json
+
+
+!/wp-content/
+wp-content/*
+!/wp-content/themes
+
+/wp-content/themes/sylwester_portfolio2/img

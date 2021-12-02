@@ -1,0 +1,238 @@
+.page-oferta {
+	.skontaktuj-sie {
+		text-align: center;
+		color: white;
+		transition: 1s;
+
+		a {
+			border-radius: 90px;
+			color: white;
+			text-transform: uppercase;
+			background: $szym-red;
+			cursor: pointer;
+			transition: 0.5s;
+			padding: 9px 12px;
+			font-weight: bold;
+
+			&:hover {
+				background: $szym-red-hover;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	.oferta-kalendarium {
+		text-align: center;
+		color: white;
+		transition: 1s;
+		margin-top: 3em;
+
+		a {
+			border-radius: 90px;
+			color: white;
+			text-transform: uppercase;
+			background: $szym-red;
+			cursor: pointer;
+			transition: 0.5s;
+			padding: 9px 12px;
+			font-weight: bold;
+			white-space: nowrap;
+
+			&:hover {
+				background: $szym-red-hover;
+				transition: 0.5s;
+			}
+		}
+	}
+
+	.offer-products {
+		@include products-loop;
+
+		li.product:last-child {
+			&::after {
+				content: "url(/img/dostawa.png)";
+				width: 100%;
+			}
+		}
+
+		.free-shipping {
+			width: 50%;
+		}
+	}
+
+	////////////// SESJA
+	.sesja {
+		display: flex;
+		background: url("img/slide_4.jpg");
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: top center;
+		color: white;
+		font-family: "Barlow", sans-serif !important;
+		z-index: 1;
+		position: relative;
+
+		.sesja-opacity {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: black;
+			opacity: 0.7;
+			z-index: 2;
+		}
+
+		.sesja-left {
+			width: 50%;
+			padding: 5% 5%;
+			z-index: 999;
+
+			//Formularz
+
+			.form {
+				padding-right: 10%;
+
+				.numer {
+					color: $szym-red;
+				}
+			}
+
+			.wpcf7 {
+				@include formularz;
+			}
+
+			h2 {
+				font-size: 3.5em;
+				font-weight: bold;
+				margin-bottom: 10%;
+				font-family: $barlow-black;
+				font-weight: 900;
+				position: relative;
+				margin-top: 0;
+
+				&::before {
+					content: "";
+					background: $szym-red;
+					width: 1.7em;
+					height: 0.5em;
+					position: absolute;
+					left: -2em;
+					top: 0.25em;
+				}
+			}
+		}
+
+		h3 {
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 3em;
+			margin-top: 0;
+			font-family: $barlow-black;
+		}
+
+		h4 {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 2em;
+			margin-bottom: 0;
+		}
+
+		.sesja-right {
+			z-index: 100;
+			padding-right: 1%;
+			padding-top: 5%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------- MOBILE -------------------------------------------*/
+
+@media (max-width: 500px) {
+	.page-oferta {
+		.skontaktuj-sie {
+			padding: 5px 8px !important;
+			line-height: 3em;
+		}
+
+		.woocommerce ul.products[class*="columns-"] li.product,
+		.woocommerce-page ul.products[class*="columns-"] li.product {
+			width: 100% !important;
+			padding-bottom: 5%;
+			height: auto;
+
+			.price {
+				float: none;
+				padding: 7px;
+			}
+
+			.cart {
+				text-align: right;
+
+				.button {
+					bottom: 5%;
+					right: 5%;
+					float: none;
+					margin-right: 10%;
+					position: static;
+				}
+			}
+		}
+
+		.free-shipping {
+			width: 100% !important;
+		}
+
+		.sesja {
+			display: block;
+
+			.sesja-opacity {
+				z-index: -2;
+			}
+
+			h2 {
+				font-size: 8vw !important;
+			}
+
+			h3 {
+				font-size: 2.5em !important;
+				margin-left: 5% !important;
+			}
+
+			h4 {
+				font-size: 2em !important;
+				margin-left: 5% !important;
+			}
+
+			.sesja-left,
+			.sesja-right {
+				width: 100%;
+			}
+
+			.sesja-left {
+				h3,
+				h4 {
+					margin-left: 0 !important;
+				}
+			}
+
+			.sesja-right {
+				padding: 5% 0;
+				padding-bottom: 10%;
+
+				.sesja-list {
+					margin-left: 5% !important;
+
+					i {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}

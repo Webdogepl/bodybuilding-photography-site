@@ -1,0 +1,154 @@
+$szym-red: #ee3042;
+$szym-red-hover: #b72432;
+
+@media (max-width: 500px) {
+	.large {
+		display: none !important;
+	}
+
+	.mobile {
+		display: initial;
+	}
+}
+
+$barlow: "Barlow", sans-serif !important;
+
+$barlow-black: "Barlow black", sans-serif !important;
+
+@mixin transition-scale {
+	transition: 0.5s;
+
+	&:hover {
+		transform: scale(1.1);
+		transition: 0.5s;
+	}
+}
+
+@mixin classic-btn__p-a {
+	background: $szym-red;
+
+	text-transform: uppercase;
+	border-radius: 30px !important;
+	width: fit-content;
+	margin: 3em auto;
+	margin: 5%;
+	padding: 10px;
+	@include transition-scale;
+
+	a {
+		color: white;
+		font-weight: bold;
+	}
+}
+
+@mixin formularz {
+	p {
+		&:nth-child(2) {
+			width: 47%;
+			display: inline-block;
+		}
+
+		&:nth-child(3) {
+			width: 47%;
+			display: inline-block;
+			margin-left: 5%;
+		}
+
+		&:nth-child(4) {
+			margin-left: 0;
+
+			input {
+				padding-left: 2.5%;
+				padding-right: 2.5%;
+			}
+		}
+
+		input {
+			border: 1px solid white;
+			padding-left: 5%;
+			width: 94%;
+		}
+
+		// TEXTAREA
+		&:nth-child(5) {
+			textarea {
+				height: 10em;
+				padding-left: 2.5%;
+
+				&:focus-visible {
+					outline: 1px solid white !important;
+				}
+			}
+		}
+
+		//CHECKBOX
+		&:nth-child(6) {
+			vertical-align: text-bottom;
+			width: fit-content;
+			float: left;
+
+			input[type="checkbox"] {
+				position: static;
+				visibility: visible;
+				width: auto !important;
+				vertical-align: middle;
+			}
+
+			span {
+				color: white;
+				text-transform: uppercase;
+				font-weight: bold;
+				vertical-align: middle;
+				font-size: 14px;
+
+				a {
+					color: $szym-red;
+				}
+			}
+		}
+
+		// WYŚLIJ
+		&:nth-child(7) {
+			vertical-align: middle;
+			width: fit-content;
+			float: right;
+			margin-top: 1%;
+
+			input[type="submit"] {
+				width: fit-content !important;
+				background: $szym-red;
+				color: white;
+				text-transform: uppercase;
+				border: none !important;
+				font-weight: bold !important;
+				padding: 12% 29%;
+				border-radius: 30px !important;
+				transition: 0.5s;
+
+				&:hover {
+					transition: 0.5s;
+					background: #ff0000;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 500px) {
+		p {
+			&:nth-child(2) {
+				width: 100%;
+				display: block;
+			}
+
+			&:nth-child(3) {
+				width: 100%;
+				display: block;
+				margin-left: 0;
+			}
+
+			&:nth-child(7) {
+				float: none;
+			}
+		}
+	}
+}

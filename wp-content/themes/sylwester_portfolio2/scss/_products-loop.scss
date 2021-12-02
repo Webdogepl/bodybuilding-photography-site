@@ -1,0 +1,141 @@
+@mixin products-loop {
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Barlow', sans-serif !important;
+
+    .woocommerce ul.products[class*=columns-] {
+        background: #252525;
+    }
+
+    li.product {
+        margin: 0 !important;
+        width: 25% !important;
+        background: #181818;
+        height: auto;
+        transition: 1s !important; 
+
+        img {
+            width: 100%;
+        }
+
+
+        .variations {
+            transition: 1s;
+        }
+
+        .woocommerce-loop-product__title {
+            font-size: 2em !important;
+            color: white !important;
+            margin-left: 5% !important;
+            font-weight: bold !important;
+            text-transform: uppercase;
+            padding-top: 0 !important;
+            margin-top: 5% !important;
+        }
+
+
+
+        .price {
+            color: white !important;
+            font-size: 1em !important;
+            text-align: right;
+            margin-right: 10%;
+            float: right;
+            width: auto;
+            text-transform: uppercase;
+            font-weight: bold !important;
+            font-size: 1.5em !important;
+        }
+
+
+        .product__read-more {
+            color: $szym-red;
+            cursor: pointer;
+        }
+
+        .dodatkowy-opis p {
+            display: inline-block;
+            color: white !important;
+            text-transform: uppercase;
+            width: 55%;
+            margin-left: 5%;
+            text-align: justify;
+            margin-top: 0;
+            font-size: 12px;
+            line-height: 1.7em;
+            display: none;
+
+            &:first-of-type {
+                display: block;
+                margin-bottom: 0;
+            }
+
+            i {
+                color: $szym-red;
+            }
+        }
+
+        .button {
+            background: $szym-red;
+            color: white;
+            text-transform: uppercase;
+            border-radius: 30px !important;
+            float: right;
+            margin: 5%;
+            @include transition-scale;
+        }
+
+        .kategorie {
+            width: auto;
+            margin-left: auto;
+        }
+
+
+        .reset_variations,
+        .quantity,
+        .product_type_variable,
+        .woocommerce-variation-price .price,
+        label {
+            display: none !important;
+        }
+
+
+    }
+
+    .productVIP {
+        background: #252525 !important;
+
+        .dodatkowy-opis p {
+            i {
+                color: rgba(255, 211, 107, 1) !important;
+            }
+        }
+
+        .button {
+            background: rgb(172, 120, 57) !important;
+            background: linear-gradient(180deg, rgba(172, 120, 57, 1) 0%, rgba(255, 211, 107, 1) 63%, rgba(255, 255, 255, 1) 97%) !important;
+        }
+
+    }
+
+
+
+
+
+    /*----------------------- MOBILE ----------------------------------------*/
+
+
+    @media (max-width:500px) {
+
+        .woocommerce ul.products[class*=columns-] li.product,
+        .woocommerce-page ul.products[class*=columns-] li.product {
+            width: 100% !important;
+
+            .button {
+                bottom: 5%;
+                right: 8%;
+            }
+        }
+    }
+
+}

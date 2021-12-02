@@ -1,0 +1,61 @@
+{
+    "name": "npm",
+    "version": "1.0.0",
+    "description": "NPM do stron",
+    "main": "index.js",
+    "watch": {
+        "compile-scss": {
+            "patterns": [
+                "ifbbpro/scss"
+            ],
+            "extensions": "scss"
+        },
+        "compile-js": {
+            "ignore": "ifbbpro/js/min",
+            "patterns": [
+                "ifbbpro/js"
+            ],
+            "extensions": "js"
+        }
+    },
+    "scripts": {
+        "run gulp": "gulp default",
+        "compile-scss": "sass ifbbpro/scss/main.scss:css/style.css && postcss --use autoprefixer <css/style.css | cssmin > css/style.min.css && copyfiles -f css/style.min.css ifbbpro",
+        "compile-js": "uglifyjs ifbbpro/js/font-awesome.js ifbbpro/js/slick.js ifbbpro/js/flipclock.min.js ifbbpro/js/main.js -o ifbbpro/js/min/main.min.js",
+        "watch": "npm-watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "beepbeep": "^1.3.0",
+        "beeper": "^3.0.0",
+        "browser-sync": "^2.27.5",
+        "css-minify": "^1.1.0",
+        "gulp": "^4.0.2",
+        "gulp-audiosprite": "^1.1.0",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-copy": "^4.0.1",
+        "gulp-livereload": "^4.0.2",
+        "gulp-minify": "^3.1.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.0.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-uglifycss": "^1.1.0",
+        "minify": "^0.8.1",
+        "postcss": "^8.3.6",
+        "postcss-cli": "^8.3.1",
+        "sass": "^1.37.5",
+        "uglify-es": "^3.3.9"
+    },
+    "dependencies": {
+        "autoprefixer-cli": "^1.0.0",
+        "fs-extra": "^9.0.1",
+        "gulp-uglify-es": "^3.0.0",
+        "npm-watch": "^0.11.0",
+        "play-sound": "^1.1.3"
+    }
+}

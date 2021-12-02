@@ -1,0 +1,97 @@
+#kalendarium-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: left; 
+    border-radius: 20px;
+    padding: 30px 80px;
+    display: none;
+
+    .close-kalendarium {
+        font-size: 2.5em;
+        color: white;
+        float: right;
+        cursor: pointer;
+    }
+
+    .kalendarium-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0;
+        position: relative;
+        font-family: $barlow-black;
+        font-size: 3em;
+
+        &::before {
+            $height: 0.3em;
+            $width: 70px;
+            background: $szym-red;
+            width: $width;
+            content: "";
+            height: $height;
+            position: absolute;
+            left: calc(#{-$width} - 10px);
+            top: calc(50% - #{$height} / 2);
+
+        }
+    }
+
+    .kalendarium-desc {
+        margin-top: 0;
+        margin-bottom: 3em;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    .kalendarium__content {
+        text-transform: uppercase;
+
+        p {
+            width: 100%;
+            line-height: 3em;
+            font-size: 1em;
+        }
+    }
+
+
+}
+
+
+
+/*-------------------------------- MOBILE --------------------------------*/
+
+@media (max-width:500px) {
+
+    #kalendarium-box {
+        width: 90%;
+        padding: 20px 30px;
+
+        .kalendarium-title {
+            font-size: 1.5em;
+
+            &::before {
+                $width: 20px;
+                width: $width;
+                left: calc(#{-$width} - 10px);
+            }
+        }
+
+        .kalendarium-desc {
+            font-size: .8em;
+        }
+
+        .kalendarium__content p {
+            line-height: 2em;
+            font-size: .8em;
+        }
+
+    }
+
+}

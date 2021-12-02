@@ -1,0 +1,124 @@
+.frontpage-blog {
+	padding: 5% 0;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(35, 35, 35, 1) 100%
+	);
+
+	&__title {
+		font-size: 3.5em;
+		font-weight: bold;
+		margin-bottom: 5%;
+		font-family: $barlow-black;
+		font-weight: 900;
+		position: relative;
+		color: white;
+		margin-left: 5%;
+
+		&::before {
+			content: "";
+			background: #ee3042;
+			width: 5%;
+			height: 0.5em;
+			position: absolute;
+			left: -6%;
+			top: calc(50% - 0.25em);
+		}
+	}
+
+	.article {
+		display: inline-block;
+		width: 39.9%;
+		margin: 0 5%;
+		position: relative;
+		transition: 1s;
+		cursor: pointer;
+
+		&:hover img {
+			filter: contrast(1.5);
+			transition: 0.5s;
+		}
+
+		&__gradient {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0.5) 0%,
+				rgba(255, 255, 255, 0) 50%,
+				rgba(0, 0, 0, 0.5) 100%
+			);
+		}
+
+		&__image {
+			max-width: 100%;
+			height: 40vh;
+			overflow: hidden;
+
+			img {
+				width: auto;
+				height: 100%;
+				transition: 1s;
+			}
+		}
+
+		&__content {
+			position: absolute;
+			bottom: 0.5em;
+			left: 5%;
+
+			.article-date {
+				margin-bottom: 0;
+				font-weight: bold;
+				color: $szym-red;
+				z-index: 9999;
+				font-size: 1.2em;
+				font-family: $barlow-black;
+				background: #000000b8;
+				width: fit-content;
+				padding: 3px 5px;
+				border-radius: 5px;
+				margin-bottom: 5px;
+			}
+
+			.article-title {
+				z-index: 99999;
+				font-weight: bold;
+				margin-top: 0;
+				text-transform: uppercase;
+				font-family: $barlow-black;
+				font-size: 1.5em;
+				text-shadow: -2px 2px black;
+
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+
+	/*-------------------------------- MOBILE -----------------------------------*/
+
+	@media (max-width: 500px) {
+		.article {
+			width: 90%;
+
+			&-date {
+				font-size: 1em !important;
+
+				a {
+					text-shadow: -1px 1px black;
+				}
+			}
+
+			&-title {
+				font-size: 1.5em;
+			}
+		}
+	}
+}

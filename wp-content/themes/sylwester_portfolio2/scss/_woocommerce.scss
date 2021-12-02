@@ -1,0 +1,154 @@
+/*-------------------------------------- CART ---------------------------------*/
+
+.woocommerce-cart-form {
+	img {
+		height: 150px !important;
+		width: auto;
+	}
+
+	table.shop_table td {
+		border-top: 1px solid white !important;
+	}
+
+	.input-text {
+		width: fit-content !important;
+	}
+
+	a {
+		color: white;
+	}
+}
+
+.cart-collaterals {
+	margin-bottom: 5% !important;
+
+	.checkout-button {
+		background-color: $szym-red !important;
+		transition: 1s;
+
+		&:hover {
+			background-color: $szym-red-hover !important;
+			transition: ease 1s;
+		}
+	}
+}
+
+/*--------------------------------- CHECKOUT -----------------------------*/
+
+.woocommerce-message {
+	display: none;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+	position: static;
+	visibility: visible;
+}
+
+.page-content {
+	color: white;
+	padding: 0 5%;
+}
+
+input[type="text"]:focus:not([readonly]),
+input[type="password"]:focus:not([readonly]),
+input[type="email"]:focus:not([readonly]),
+input[type="url"]:focus:not([readonly]),
+input[type="time"]:focus:not([readonly]),
+input[type="date"]:focus:not([readonly]),
+input[type="datetime-local"]:focus:not([readonly]),
+input[type="tel"]:focus:not([readonly]),
+input[type="number"]:focus:not([readonly]),
+input[type="search"]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+	border-bottom: 1px solid #fff !important;
+	box-shadow: 0 1px 0 0 #fff !important;
+}
+
+h1.page-title {
+	padding-top: 10%;
+	margin-top: 0;
+	color: white;
+	font-family: $barlow-black;
+	font-weight: 900;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.woocommerce-info {
+	border-top-color: $szym-red;
+	color: white;
+	background: black;
+
+	a {
+		color: $szym-red;
+	}
+
+	&::before {
+		color: white;
+	}
+}
+
+.woocommerce-billing-fields {
+	label {
+		color: white;
+	}
+}
+
+.woocommerce table.shop_table {
+	border: 1px solid white;
+}
+
+.wc_payment_methods {
+	background: black;
+}
+
+.place-order {
+	background: black;
+
+	button {
+		text-transform: uppercase;
+		background-color: $szym-red !important;
+
+		&:hover {
+			background-color: red !important;
+		}
+	}
+}
+
+/*----------------------------------------------- OTHERS ----------------------------------------------*/
+
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover {
+	background-color: $szym-red !important;
+}
+
+/*-------------------------------------------- MOBILE --------------------------------------*/
+@media (max-width: 500px) {
+	h1.page-title {
+		font-size: 2em;
+		padding-top: 30%;
+	}
+}

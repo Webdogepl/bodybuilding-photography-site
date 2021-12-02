@@ -1,0 +1,99 @@
+header {
+	font-family: "Barlov", sans-serif !important;
+
+	.container {
+		height: 70px;
+
+		.row {
+			margin: 10px 15px;
+			max-width: 100%;
+			height: 70px;
+		}
+	}
+
+	.lang-switcher {
+		display: inline-block;
+		width: fit-content;
+		img {
+			width: 28px;
+			vertical-align: middle;
+		}
+
+		a:hover {
+			background: transparent;
+		}
+	}
+
+	ul {
+		width: 65%;
+
+		li a {
+			color: white !important;
+		}
+	}
+
+	.menu-large {
+		width: 65vw;
+		text-align: right;
+	}
+
+	.contact {
+		float: right;
+		position: static !important;
+
+		p {
+			color: white !important;
+		}
+
+		i {
+			color: $szym-red !important;
+			opacity: 1 !important;
+		}
+
+		a {
+			opacity: 1 !important;
+		}
+
+		.phone {
+			font-size: 15px;
+		}
+	}
+
+	.menu-mobile-overlay {
+		background: rgb(0, 0, 0, 0.85);
+		position: absolute;
+		height: auto;
+		padding: 5vh;
+		width: 100vw;
+		top: 0;
+		left: 0;
+		display: none;
+
+		.menu-mobile {
+			display: none;
+			float: none;
+			width: 100%;
+
+			li {
+				font-size: 12px;
+				display: block;
+				margin-top: 4vh;
+
+				a {
+					background: transparent;
+					border-bottom: 1px solid white;
+				}
+			}
+
+			.close-mobile-menu {
+				background: transparent;
+				font-size: 30px;
+
+				a {
+					background: transparent;
+					border-bottom: none;
+				}
+			}
+		}
+	}
+}
