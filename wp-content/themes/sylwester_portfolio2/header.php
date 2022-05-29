@@ -38,7 +38,7 @@
 
 </head>
 
-<body class="<?php echo 'page-id-' . $post->ID ?>">
+<body <?php echo body_class(); ?>>
 
     <header class=" nav-wrapper">
         <div class="container">
