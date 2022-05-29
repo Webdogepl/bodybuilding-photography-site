@@ -1,0 +1,58 @@
+.single-product {
+	.product {
+		color: white;
+		margin-inline: 5%;
+
+		.price {
+			display: none;
+		}
+
+		select {
+			background: black;
+		}
+
+		a {
+			color: $szym-red !important;
+		}
+
+		button {
+			background-color: $szym-red !important;
+			color: white !important;
+		}
+
+		.quantity {
+			display: none !important;
+		}
+	}
+
+	.related {
+		clear: both;
+		padding-top: 2rem;
+
+		.dodatkowy-opis {
+			display: none !important;
+		}
+
+		.variations_form {
+			display: none !important;
+		}
+
+		.woocommerce-loop-product__title {
+			font-size: 2rem !important;
+		}
+
+		.price {
+			font-size: 1.5rem !important;
+			color: $szym-red !important;
+		}
+
+		.button {
+			background-color: $szym-red !important;
+			color: white !important;
+		}
+	}
+
+	#sidebar > * {
+		display: none !important;
+	}
+}
